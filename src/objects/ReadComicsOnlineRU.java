@@ -1,6 +1,7 @@
 package objects;
 
 /**@TODO Manage the existence of "Book" links like "Clementine" */
+/**@TODO Implement Factory Pattern" */
 
 public class ReadComicsOnlineRU extends ComicWeb {
     String imageLink= "https://readcomicsonline.ru/uploads/manga/";
@@ -17,7 +18,7 @@ public class ReadComicsOnlineRU extends ComicWeb {
         }
 
         this.name = getComicName(url);
-
+        this.type = url.contains("chapters") ? comicType.CHAPTER : comicType.BOOK;
         this.chapter = getChapter(url);
         this.page = 1;
 
@@ -36,8 +37,7 @@ public class ReadComicsOnlineRU extends ComicWeb {
     }
 
     @Override
-    public void nextChapter(){
-        System.out.println("Guate ?");
+    public void nextComic(){
         chapter++;
         page = 1;
         this.imageURL = getImageURL();

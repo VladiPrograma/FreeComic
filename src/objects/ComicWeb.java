@@ -1,18 +1,25 @@
 package objects;
 
+
 public class  ComicWeb {
+    enum comicType {CHAPTER, BOOK}
+
     public String url;
     public String name;
     public String imageURL;
+    public comicType type;
     public int chapter;
     public int page;
 
-    public ComicWeb(String url, String name, String baseURL, String imageURL, int chapter, int page){
+
+    public ComicWeb(String url, String name, String imageURL, comicType type, int chapter, int page){
         this.url = url;
         this.name = name;
+        this.type = type;
         this.chapter = chapter;
         this.page = page;
         this.imageURL = imageURL;
+
     }
 
     public ComicWeb(String url){
@@ -20,7 +27,7 @@ public class  ComicWeb {
         this.url = url;
     }
 
-    public void nextChapter(){
+    public void nextComic(){
         chapter++;
         page = 0;
     }

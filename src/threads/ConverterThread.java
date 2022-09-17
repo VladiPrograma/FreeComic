@@ -32,9 +32,9 @@ public class ConverterThread extends Thread{
         }
         if (option == 2){
             downloadComic();
-            comic.nextChapter();
+            comic.nextComic();
             downloadComic();
-            comic.nextChapter();
+            comic.nextComic();
             downloadComic();
             sucessAdvise(advise, frame);
             return;
@@ -47,7 +47,7 @@ public class ConverterThread extends Thread{
         try {
             while (true){
                 downloadComic();
-                comic.nextChapter();
+                comic.nextComic();
             }
         }catch (Exception e){
             System.out.println("No more chapters to add.");
