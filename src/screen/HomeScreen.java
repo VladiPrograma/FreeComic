@@ -1,17 +1,13 @@
 package screen;
 
-import logic.ComicExtractor;
-import logic.FileManager;
+import objects.ComicFactory;
 import objects.ComicWeb;
-import objects.ReadComicsOnlineRU;
 import threads.ConverterThread;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 
 public class HomeScreen extends JFrame {
 
@@ -229,15 +225,11 @@ public class HomeScreen extends JFrame {
             failAdvise(advise, this);
             return;
         }
-        if(url.contains("readcomicsonline.ru")){
-            comic = new ReadComicsOnlineRU(url);
-        }
-        else{
+        comic = ComicFactory.createComicWeb(url);
+        if(comic == null ){
             failAdvise(advise, this);
             return;
         }
-
-        System.out.println(option);
 
         ConverterThread thread = new ConverterThread(comic, option, this, advise);
         thread.start();

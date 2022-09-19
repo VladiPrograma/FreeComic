@@ -1,6 +1,5 @@
 package threads;
 
-import logic.ComicExtractor;
 import logic.FileManager;
 import objects.ComicWeb;
 
@@ -60,7 +59,7 @@ public class ConverterThread extends Thread{
         waitAdvise(advise, frame, "Downloading Images...");
         FileManager.downloadChapterImages(comic, advise, frame);
         waitAdvise(advise, frame, "Images to PDF...");
-        ComicExtractor.ChapterImagesToPDF(comic);
+        FileManager.ChapterImagesToPDF(comic);
         waitAdvise(advise, frame, "Cleaning...");
         FileManager.removeImages(comic.chapter, comic.chapter);
         sucessAdvise(advise, frame);
