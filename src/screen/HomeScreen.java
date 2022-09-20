@@ -1,5 +1,6 @@
 package screen;
 
+import logic.FileManager;
 import objects.ComicFactory;
 import objects.ComicWeb;
 import threads.ConverterThread;
@@ -221,7 +222,7 @@ public class HomeScreen extends JFrame {
         String url = textField.getText();
         ComicWeb comic;
 
-        if(url==null||url.isEmpty()){
+        if(url==null||url.isEmpty()|| !FileManager.WebExists(url)){
             failAdvise(advise, this);
             return;
         }
