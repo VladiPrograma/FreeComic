@@ -6,4 +6,4 @@
 
 **Usage**
 
-<p align="center"><img align="center" alt="GIF" src="https://github.com/VladiPrograma/VladiPrograma/blob/main/assets/monkey.gif?raw=true"/></p>
+<p align="center"><img align="center" alt="GIF" src="https://github.com/VladiPrograma/FreeComic/blob/main/img/Example1.gif?raw=true"/></p>
