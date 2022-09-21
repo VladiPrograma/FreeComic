@@ -4,12 +4,6 @@
 
 `FreeComic` is the easiest way to download PDF comics.
 
-
-
- |Example Overview|
-
-
 **Usage**
 
-.. |Example Overview| image:: https://raw.githubusercontent.com/iterative/vscode-dvc/main/extension/docs/overview.gif
-   :alt: DVC Extension for VS Code
+<p align="center"><img align="center" alt="GIF" src="https://github.com/VladiPrograma/VladiPrograma/blob/main/assets/monkey.gif?raw=true"/></p>
