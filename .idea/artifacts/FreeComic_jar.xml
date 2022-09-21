@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FreeComic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/FreeComic_jar</output-path>
+    <root id="archive" name="FreeComic_jar.jar">
+      <element id="module-output" name="FreeComic" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/assets/jars/itextpdf-5.5.9.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

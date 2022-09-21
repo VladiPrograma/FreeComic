@@ -5,15 +5,17 @@ import objects.ComicWeb;
 import threads.ConverterThread;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class HomeScreen extends JFrame {
 
-    private ImageIcon backgroundIcon = new ImageIcon("assets\\images\\background.png");
-    private ImageIcon whiteIcon = new ImageIcon("assets\\images\\whiteDot.png");
-    private ImageIcon pinkIcon = new ImageIcon("assets\\images\\pinkDot.png");
+    private final ImageIcon backgroundIcon = new ImageIcon("assets\\images\\background.png");
+    private final ImageIcon whiteIcon = new ImageIcon("assets\\images\\whiteDot.png");
+    private final ImageIcon pinkIcon = new ImageIcon("assets\\images\\pinkDot.png");
+    private final ImageIcon icon = new ImageIcon("img\\icon.png");
     int option = 1;
     private final JTextField textField;
     private final JLabel button;
@@ -31,9 +33,10 @@ public class HomeScreen extends JFrame {
     public HomeScreen(){
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(WIDTH, HEIGHT);
+        this.setTitle("Free Comic App");
         this.setLayout(null);
         this.setResizable(false);
-
+        this.setIconImage(icon.getImage());
         JLayeredPane layeredPane = new JLayeredPane();
         layeredPane.setBounds(FULL_SCREEN);
 
