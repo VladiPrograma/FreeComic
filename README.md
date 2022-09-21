@@ -5,6 +5,11 @@
 `FreeComic` is the easiest way to download PDF comics.
 
 
-Designed for Windows Mac & Linux. *Not yet tested on macOS, but I'm working on updating it!*
+
+ |Example Overview|
+
 
 **Usage**
+
+.. |Example Overview| image:: https://raw.githubusercontent.com/iterative/vscode-dvc/main/extension/docs/overview.gif
+   :alt: DVC Extension for VS Code
