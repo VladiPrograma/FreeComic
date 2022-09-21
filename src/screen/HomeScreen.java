@@ -9,6 +9,10 @@ import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class HomeScreen extends JFrame {
 
@@ -19,6 +23,7 @@ public class HomeScreen extends JFrame {
     int option = 1;
     private final JTextField textField;
     private final JLabel button;
+    private final JLabel web;
     private final JLabel advise;
 
     private final JLabel one;
@@ -95,6 +100,38 @@ public class HomeScreen extends JFrame {
             }
         });
         componentsPanel.add(button);
+
+        web = new JLabel();
+        web.setBounds(580, 176, 680, 59);
+        web.setOpaque(true);
+        web.setBackground(new Color(0x0516A85, true));
+        web.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                try {
+                    Desktop.getDesktop().browse(new URL("https://readcomicsonline.ru/").toURI());
+                } catch (IOException | URISyntaxException ex) {
+                    ex.printStackTrace();
+                }
+            }
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        componentsPanel.add(web);
 
         advise = new JLabel();
         advise.setBounds(460, 630, 670, 50);
