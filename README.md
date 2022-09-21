@@ -3,7 +3,7 @@
 <img width="100" src="https://img.shields.io/badge/plastic-legal-success">
 <img width="100" src="https://img.shields.io/github/downloads/VladiPrograma/FreeComic/total?color=Success">
  <img width="100" src="https://img.shields.io/github/repo-size/VladiPrograma/FreeComic"> 
- <img width="100" src="https://img.shields.io/github/followers/VladiPrograma?style=social">
+ <img width="100" src="https://img.shields.io/github/followers/VladiPrograma?style=plastic">
 </p>
 
 
