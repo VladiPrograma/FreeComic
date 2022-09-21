@@ -38,6 +38,8 @@ public class ConverterThread extends Thread{
             sucessAdvise(advise, frame);
             return;
         }
+        /** @TODO Check if chapter exists */
+        /** @TODO waitAdvise with chap number */
         /** @TODO try to move away screen logic from backend logic */
 
 
