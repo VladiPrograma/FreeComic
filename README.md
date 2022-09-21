@@ -14,7 +14,7 @@
 **Usage**
 ---
 
-1. Download the `FreeComic` exe from Releases tab or Mega.
+1. Download the `FreeComic` exe from Releases tab or <a href="https://mega.nz/folder/YC9WTQhK#_P_a8-zjw7wamiQfby-YDQ">Mega</a>.
 2. Go to readcomicsonline.ru
 3. Look for any comic 
 4. Copy the URL and paste in App
