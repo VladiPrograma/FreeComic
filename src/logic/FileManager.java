@@ -13,10 +13,6 @@ import java.net.URLConnection;
 import static screen.HomeScreen.waitAdvise;
 
 public class FileManager {
-
-
-   
-
     public static void downloadChapterImages(ComicWeb comic,  JLabel label, JFrame frame) {
 
       String input = comic.getDownloadPageURL();

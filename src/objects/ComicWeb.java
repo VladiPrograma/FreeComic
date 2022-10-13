@@ -5,6 +5,7 @@ public class  ComicWeb {
     enum ComicType {CHAPTER, BOOK, GRAPHIC_NOVEL}
 
     public String imageURL;
+    public String webURL;
     public String name;
     public ComicType type;
     public int chapter;

@@ -11,8 +11,8 @@ public class ReadComicsOnlineRU extends ComicWeb {
     public ReadComicsOnlineRU(String url){
         super();
         url = url.replace("#", "");
-
-        this.imageURL =  "https://readcomicsonline.ru/uploads/manga/";
+        this.webURL = "https://readcomicsonline.ru/";
+        this.imageURL =  webURL+"/uploads/manga/";
         String[] args = url.split("/");
 
 
@@ -66,8 +66,9 @@ public class ReadComicsOnlineRU extends ComicWeb {
     }
 
     public String getComicName(String[] args) {
-      if(args.length == 5) return args[args.length-1];
-      if(args.length == 6) return args[args.length-2];
+        if(args.length == 7) return args[args.length-3];
+        if(args.length == 6) return args[args.length-2];
+        if(args.length == 5) return args[args.length-1];
 
       return args[args.length-4];
     }
@@ -75,13 +76,13 @@ public class ReadComicsOnlineRU extends ComicWeb {
     @Override
     public String getDownloadPageURL(){
         if (type.equals(ComicType.CHAPTER)){
-            return imageURL+name+"/chapters/"+chapter+"/"+pageFormat()+".jpg";
+            return webURL+"uploads/manga/"+name+"/chapters/"+chapter+"/"+pageFormat()+".jpg";
         }
         if( type.equals(ComicType.BOOK)){
-            return imageURL+name+"/chapters/book-"+chapter+"/"+pageFormat()+".jpg";
+             return webURL+"uploads/manga/"+name+"/chapters/book-"+chapter+"/"+pageFormat()+".jpg";
         }
         if( type.equals(ComicType.GRAPHIC_NOVEL)){
-            return imageURL+name+"/chapters/GN/"+pageFormat()+".jpg";
+            return webURL+"uploads/manga/"+name+"/chapters/GN/"+pageFormat()+".jpg";
         }
         return null;
     }
@@ -95,6 +96,7 @@ public class ReadComicsOnlineRU extends ComicWeb {
             type = ComicType.CHAPTER;
         }
         chapter++;
+        page = 1;
         imageURL = getDownloadPageURL();
     }
 }
